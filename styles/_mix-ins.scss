@@ -1,0 +1,10 @@
+@mixin flex($direction, $orientation) {
+  display: flex;
+  justify-content: $orientation;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin fullWidth {
+  width: 100%;
+}

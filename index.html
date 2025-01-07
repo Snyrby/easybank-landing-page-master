@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/style.css">
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/style.css" />
+
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
-<body>
 
+<body>
   <!-- Home
   About
   Contact
@@ -21,22 +23,31 @@
   Careers
 
   Request Invite -->
-  <nav class="nav">
-    <img src="./images/logo.svg" alt="logo">
-    <img src="./images/icon-hamburger.svg" alt="menu-icon">
-  </nav>
+  <header class="header">
+    <button type="button">
+      <img src="./images/logo.svg" alt="logo" class="header__logo" />
+    </button>
+    <button type="button">
+      <img src="./images/icon-hamburger.svg" alt="menu-icon" class="header__menu" />
+    </button>
+  </header>
 
+  <main>
+    <section class="hero">
+      <img src="/images/image-mockups.png" alt="phone" class="hero__img" />
+      <div class="hero__container">
+        <h1 class="hero__title">Next generation digital banking</h1>
+        <p class="hero__subtitle">
+          Take your financial life online. Your Easybank account will be a
+          one-stop-shop for spending, saving, budgeting, investing, and much
+          more.
+        </p>
+        <button type="button" class="hero__btn">Request Invite</button>
+      </div>
+    </section>
+  </main>
 
-
-  <!-- Next generation digital banking
-
-  Take your financial life online. Your Easybank account will be a one-stop-shop 
-  for spending, saving, budgeting, investing, and much more.
-
-  Request Invite
-
-
-
+  <!--
   Why choose Easybank?
 
   We leverage Open Banking to turn your bank account into your financial hub. Control 
@@ -94,10 +105,11 @@
   Request Invite
 
   © Easybank. All Rights Reserved -->
-  
+
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 </body>
+
 </html>

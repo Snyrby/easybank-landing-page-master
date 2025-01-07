@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mix-ins";
+@import "./_variables";
+@import "./_mix-ins";
 
 * {
   margin: 0;
@@ -11,10 +11,29 @@ body {
   font-family: "Public Sans", serif;
 }
 
-.nav {
-    position: fixed;
-    background: blue;
-    height: 2.5rem;
-    width: 100%;
-    @include flexBetween();
+.header {
+  position: fixed;
+  background: green;
+  height: 4rem;
+  @include fullWidth;
+  @include flex(row, space-between);
+  padding: 0 2rem;
+  .header__logo,
+  .header__menu {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.hero {
+  @include flex(column, center);
+  &__img {
+    @include fullWidth;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__container {
+    @include flex(column, center);
+  }
 }
