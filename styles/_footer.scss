@@ -1,0 +1,9 @@
+.footer {
+    background: $Dark-Blue;
+    &__logo {
+        filter: $White;
+      font-size: 2rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+}

@@ -15,12 +15,12 @@
     }
   }
   &__heading {
-    @include textHeading;
+    @include textHeading(center);
   }
   &__text {
-    @include text;
+    @include text(center);
   }
   &__sub-heading {
-    @include subHeading;
+    @include subHeading(subHeading);
   }
 }

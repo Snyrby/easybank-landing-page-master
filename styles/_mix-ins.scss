@@ -15,35 +15,31 @@
   background: none;
 }
 
-@mixin textAlign($alignment) {
-  text-align: $alignment;
-}
-
-@mixin textHeading {
+@mixin textHeading($alignment: left) {
   font-size: 2rem;
-  text-align: center;
+  text-align: $alignment;
   color: $Dark-Blue;
   font-weight: 400;
 }
 
-@mixin subHeading {
-  @include textHeading;
+@mixin subHeading($alignment: left) {
+  @include textHeading($alignment);
   font-size: 1.2rem;
-  margin-top: 1rem;
+  @include mt;
 }
 
-@mixin text {
+@mixin text($alignment: left) {
   font-size: 0.9rem;
-  text-align: center;
+  text-align: $alignment;
   line-height: 1.5rem;
   color: $Grayish-Blue;
   font-weight: 300;
-  margin-top: 1rem;
+  @include mt;
 }
 
 @mixin btn {
   @include noBackground;
-  margin-top: 2rem;
+  @include mt(2);
   padding: 1rem 4rem;
   border-radius: 25px;
   background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
@@ -57,4 +53,8 @@
 @mixin section {
   @include flex(column, center);
   padding: 4rem 2rem;
+}
+
+@mixin mt($num: 1) {
+  margin-top: $num * 1rem;
 }

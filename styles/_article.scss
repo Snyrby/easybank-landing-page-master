@@ -1,20 +1,35 @@
 .article {
-    @include section;
-    background: $Very-Light-Gray;
-    &__container {
-        @include flex(column, center);
+  @include section;
+  background: $Very-Light-Gray;
+  &__container {
+    @include flex(column, center);
+    &--align-start {
+      align-items: flex-start;
     }
-    &__img {
-        object-fit: fill;
-        border-radius: 10px;
-        max-height: 250px; 
-        @include fullWidth;
+    &--px {
+      padding: 0 2rem;
     }
-    &__heading {
-        @include textHeading;
+  }
+  &__img {
+    object-fit: fill;
+    border-radius: 10px;
+    max-height: 250px;
+    @include fullWidth;
+  }
+  &__heading {
+    @include textHeading;
+    margin-bottom: 2rem;
+  }
+  &__card {
+    padding-bottom: 4rem;
+  }
+  &__text {
+    @include text;
+    &--smaller {
+      font-size: 0.7rem;
     }
-    &__card {
-        background: $White;
-        padding-bottom: 4rem;
-    }
+  }
+  &__sub-heading {
+    @include subHeading;
+  }
 }
