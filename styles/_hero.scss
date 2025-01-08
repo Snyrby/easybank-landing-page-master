@@ -1,0 +1,38 @@
+.hero {
+  @include section;
+  padding-top: 0;
+  background-color: $Very-Light-Gray;
+  &__img {
+    @include fullWidth;
+    height: auto;
+    margin-top: -7rem;
+    z-index: 1;
+
+    &--absolute {
+      position: absolute;
+      z-index: 0;
+      width: calc(100% + 4rem);
+    }
+
+    &--mt0 {
+      margin-top: 0;
+    }
+  }
+
+  &__container {
+    @extend .hero;
+    &--relative {
+      position: relative;
+    }
+  }
+  &__heading {
+    @include textHeading;
+    font-size: 2.5rem;
+  }
+  &__text {
+    @include text;
+  }
+  &__btn {
+    @include btn;
+  }
+}

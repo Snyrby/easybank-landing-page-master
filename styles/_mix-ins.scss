@@ -8,3 +8,53 @@
 @mixin fullWidth {
   width: 100%;
 }
+
+@mixin noBackground {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+@mixin textAlign($alignment) {
+  text-align: $alignment;
+}
+
+@mixin textHeading {
+  font-size: 2rem;
+  text-align: center;
+  color: $Dark-Blue;
+  font-weight: 400;
+}
+
+@mixin subHeading {
+  @include textHeading;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+@mixin text {
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.5rem;
+  color: $Grayish-Blue;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+@mixin btn {
+  @include noBackground;
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+  color: $White;
+  &:is(:hover, :focus-visible) {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+}
+
+@mixin section {
+  @include flex(column, center);
+  padding: 4rem 2rem;
+}

@@ -1,0 +1,26 @@
+.cta {
+  @include section;
+  background: $Light-Grayish-Blue;
+  &__container {
+    @include flex(column, center);
+    margin: 1rem 0;
+    &--mt0 {
+      margin-top: 0;
+    }
+    &--mt2 {
+      margin-top: 2rem;
+    }
+    &--mb0 {
+      margin-bottom: 0;
+    }
+  }
+  &__heading {
+    @include textHeading;
+  }
+  &__text {
+    @include text;
+  }
+  &__sub-heading {
+    @include subHeading;
+  }
+}

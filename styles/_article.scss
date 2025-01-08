@@ -1,0 +1,20 @@
+.article {
+    @include section;
+    background: $Very-Light-Gray;
+    &__container {
+        @include flex(column, center);
+    }
+    &__img {
+        object-fit: fill;
+        border-radius: 10px;
+        max-height: 250px; 
+        @include fullWidth;
+    }
+    &__heading {
+        @include textHeading;
+    }
+    &__card {
+        background: $White;
+        padding-bottom: 4rem;
+    }
+}

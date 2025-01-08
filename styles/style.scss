@@ -1,5 +1,8 @@
 @import "./_variables";
 @import "./_mix-ins";
+@import "./hero";
+@import "./cta";
+@import "./article";
 
 * {
   margin: 0;
@@ -7,33 +10,27 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   font-family: "Public Sans", serif;
+  min-width: 100%;
 }
 
 .header {
-  position: fixed;
-  background: green;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: $White;
   height: 4rem;
   @include fullWidth;
   @include flex(row, space-between);
   padding: 0 2rem;
-  .header__logo,
-  .header__menu {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
 
-.hero {
-  @include flex(column, center);
-  &__img {
-    @include fullWidth;
-    height: 100%;
-    object-fit: cover;
+  &__btn {
+    @include noBackground;
   }
-  &__container {
-    @include flex(column, center);
+
+  &__logo,
+  &__menu {
+    cursor: pointer;
   }
 }
