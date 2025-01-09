@@ -11,7 +11,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   font-family: "Public Sans", serif;
   min-width: 100%;
 }
@@ -28,10 +29,59 @@ body, html {
 
   &__btn {
     @include noBackground;
+    @include menu-icon;
   }
-
-  &__logo,
   &__menu {
     cursor: pointer;
+  }
+  &__logo-link {
+    @include noBackground;
+  }
+}
+
+.mobile-nav {
+  position: absolute;
+  z-index: 10;
+  top: 5rem;
+  width: calc(100% - 4rem);
+  box-shadow: 0 0 50px $Dark-Blue;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  &__list {
+    background: $White;
+    list-style: none;
+    @include section;
+    gap: 2rem;
+    &-item {
+      text-decoration: none;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $Dark-Blue;
+    position: relative;
+    @include subHeading;
+    @include noBackground;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px; /* Position the line at the bottom */
+      width: 100%;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: scaleX(0);
+      opacity: 0;
+      transform-origin: center;
+      height: 4px;
+      background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+      border-radius: 2px;
+    }
+    &:is(:hover, :focus-visible) {
+      &::after {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
   }
 }

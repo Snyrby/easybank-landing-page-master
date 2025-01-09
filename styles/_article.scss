@@ -3,12 +3,6 @@
   background: $Very-Light-Gray;
   &__container {
     @include flex(column, center);
-    &--align-start {
-      align-items: flex-start;
-    }
-    &--px {
-      padding: 0 2rem;
-    }
   }
   &__img {
     object-fit: fill;
@@ -18,10 +12,16 @@
   }
   &__heading {
     @include textHeading;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   &__card {
     padding-bottom: 4rem;
+    & .article__container {
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0 2rem;
+        @include mt;
+    }
   }
   &__text {
     @include text;
