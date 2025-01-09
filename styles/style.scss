@@ -17,6 +17,14 @@ html {
   min-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -45,20 +53,14 @@ html {
   top: 5rem;
   width: calc(100% - 4rem);
   box-shadow: 0 0 50px $Dark-Blue;
-  box-sizing: border-box;
-  transition: opacity 0.5s ease;
+  @include transition;
   opacity: 0;
   &__list {
     background: $White;
-    list-style: none;
     @include section;
     gap: 2rem;
-    &-item {
-      text-decoration: none;
-    }
   }
   &__link {
-    text-decoration: none;
     color: $Dark-Blue;
     position: relative;
     @include subHeading;
@@ -69,7 +71,7 @@ html {
       left: 0;
       bottom: -10px; /* Position the line at the bottom */
       width: 100%;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      @include transition;
       transform: scaleX(0);
       opacity: 0;
       transform-origin: center;
@@ -85,3 +87,15 @@ html {
     }
   }
 }
+
+// @media screen and (min-width: 768px) {
+//   .header {
+//     &__menu {
+//     display: none;
+//     }
+//     &__btn-desktop {
+//       @include btn;
+//       @include noBackground;
+//     }
+//   }
+// }

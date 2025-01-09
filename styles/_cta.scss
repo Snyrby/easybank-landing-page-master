@@ -11,6 +11,6 @@
     @include text(center);
   }
   &__sub-heading {
-    @include subHeading(subHeading);
+    @include subHeading;
   }
 }

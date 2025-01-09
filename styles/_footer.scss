@@ -9,24 +9,22 @@
   }
   &__list {
     @include flex(row, center);
-    list-style: none;
     @include mt(1.5);
     &--column {
       @include flex(column, center);
     }
   }
   &__link {
-    text-decoration: none;
     color: white;
-    transition: all 0.3s ease;
+    @include transition;
+    @include noBackground;
     &:is(:hover, :focus-visible) {
       color: $Lime-Green;
       filter: invert(34%) sepia(91%) saturate(677%) hue-rotate(92deg)
         brightness(97%) contrast(95%);
-      @include noBackground;
     }
     & img {
-      transition: filter 0.3s ease;
+      @include transition;
       width: 1.5rem;
       &:hover {
         filter: invert(34%) sepia(91%) saturate(677%) hue-rotate(92deg)
@@ -43,6 +41,6 @@
     @include mt(0);
   }
   &__text {
-    @include text(center);
+    @include text;
   }
 }

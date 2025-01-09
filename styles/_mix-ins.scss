@@ -26,7 +26,6 @@
 @mixin subHeading($alignment: left) {
   @include textHeading($alignment);
   font-size: 1.2rem;
-  // @include mt;
 }
 
 @mixin text($alignment: left) {
@@ -35,7 +34,6 @@
   line-height: 1.5rem;
   color: $Grayish-Blue;
   font-weight: 300;
-  // @include mt;
 }
 
 @mixin btn {
@@ -45,7 +43,7 @@
   border-radius: 25px;
   background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
   color: $White;
-  transition: opacity 0.5s ease;
+  @include transition;
   &:is(:hover, :focus-visible) {
     opacity: 0.7;
     text-decoration: underline;
@@ -62,11 +60,21 @@
 }
 
 @mixin menu-icon {
+  @include transition;
   padding: 0.5rem;
-  transition: background 0.3s ease;
   border-radius: 5px;
   &:is(:hover, :focus-visible) {
     background: #f0f0f0;
     opacity: 0.7;
+  }
+}
+
+@mixin transition {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin desktop {
+  @media screen and (min-width: 768px) {
+    @content;
   }
 }
