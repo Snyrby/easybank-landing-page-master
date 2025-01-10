@@ -2,6 +2,9 @@
   @include section;
   padding-top: 0;
   background-color: $Very-Light-Gray;
+  @include desktop {
+    flex-direction: row-reverse;
+  }
   &__img {
     @include fullWidth;
     height: auto;
@@ -20,9 +23,12 @@
   }
 
   &__container {
-    @extend .hero;
+    @include flex(column, center);
     &--relative {
       position: relative;
+    }
+    @include desktop {
+      align-items: flex-start
     }
   }
   &__heading {

@@ -34,13 +34,30 @@ ul {
   @include fullWidth;
   @include flex(row, space-between);
   padding: 0 2rem;
+  @include desktop {
+    padding: 0 4rem;
+  }
 
   &__btn {
     @include noBackground;
     @include menu-icon;
+    @include desktop{
+      @include btn;
+      margin-top: 0;
+      text-wrap: nowrap;
+    }
+    &-text {
+      display: none;
+      @include desktop{
+        display: block;
+      }
+    }
   }
   &__menu {
     cursor: pointer;
+    @include desktop{
+      display: none;
+    }
   }
   &__logo-link {
     @include noBackground;
@@ -54,17 +71,30 @@ ul {
   width: calc(100% - 4rem);
   box-shadow: 0 0 50px $Dark-Blue;
   @include transition;
+  @include desktop {
+    position: static;
+    opacity: 100;
+    box-shadow: none;
+  }
   opacity: 0;
   &__list {
     background: $White;
     @include section;
     gap: 2rem;
+    @include desktop {
+      flex-direction: row;
+      padding: 0 0;
+      gap: 0.75rem;
+    }
   }
   &__link {
     color: $Dark-Blue;
     position: relative;
     @include subHeading;
     @include noBackground;
+    @include desktop {
+      @include text
+    }
     &::after {
       content: "";
       position: absolute;
@@ -87,15 +117,3 @@ ul {
     }
   }
 }
-
-// @media screen and (min-width: 768px) {
-//   .header {
-//     &__menu {
-//     display: none;
-//     }
-//     &__btn-desktop {
-//       @include btn;
-//       @include noBackground;
-//     }
-//   }
-// }

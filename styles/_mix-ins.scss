@@ -21,6 +21,9 @@
   text-align: $alignment;
   color: $Dark-Blue;
   font-weight: 400;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 @mixin subHeading($alignment: left) {
@@ -34,12 +37,15 @@
   line-height: 1.5rem;
   color: $Grayish-Blue;
   font-weight: 300;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 @mixin btn {
   @include noBackground;
   @include mt(2);
-  padding: 1rem 4rem;
+  padding: 0.75rem 2rem;
   border-radius: 25px;
   background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
   color: $White;
@@ -53,6 +59,9 @@
 @mixin section {
   @include flex(column, center);
   padding: 4rem 2rem;
+  @include desktop {
+    padding: 4rem;
+  }
 }
 
 @mixin mt($num: 1) {

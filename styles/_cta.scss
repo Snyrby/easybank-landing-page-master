@@ -1,8 +1,26 @@
 .cta {
   @include section;
   background: $Light-Grayish-Blue;
+  align-items: flex-start;
+  @include desktop {
+    gap: 4rem;
+  }
+  &__wrapper {
+    @include desktop {
+      display: flex;
+      gap: 1rem;
+    }
+  }
   &__container {
     @include flex(column, center);
+    @include desktop {
+      align-items: flex-start;
+      &--thin {
+        @include desktop {
+          width: 50%;
+        }
+      }
+    }
   }
   &__heading {
     @include textHeading(center);
