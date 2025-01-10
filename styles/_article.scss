@@ -3,12 +3,26 @@
   background: $Very-Light-Gray;
   &__container {
     @include flex(column, center);
+    @include desktop {
+      align-items: flex-start;
+    }
+  }
+  &__wrapper {
+    @include desktop {
+      @include flex(row, center);
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
   }
   &__img {
     object-fit: fill;
     border-radius: 10px;
     max-height: 250px;
+    aspect-ratio: 4/3;
     @include fullWidth;
+    @include desktop {
+      // aspect-ratio: 1/1;
+    }
   }
   &__heading {
     @include textHeading;

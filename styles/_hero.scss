@@ -4,6 +4,7 @@
   background-color: $Very-Light-Gray;
   @include desktop {
     flex-direction: row-reverse;
+    padding-top: 0;
   }
   &__img {
     @include fullWidth;
