@@ -4,22 +4,28 @@
   background-color: $Very-Light-Gray;
   @include desktop {
     flex-direction: row-reverse;
+    justify-content: space-between;
     padding-top: 0;
+    padding-right: 0;
   }
   &__img {
     @include fullWidth;
     height: auto;
     margin-top: -7rem;
     z-index: 1;
-
-    &--absolute {
+    @include desktop {
+      translate: 4rem -4rem;
+    }
+    &-bg {
       position: absolute;
       z-index: 0;
-      width: calc(100% + 4rem);
-    }
-
-    &--mt0 {
-      margin-top: 0;
+      left: -2rem;
+      top: 0;
+      max-height: 110%;
+      width: calc(100% + 10rem);
+      @include desktop {
+        top: -8rem;
+      }
     }
   }
 
@@ -29,7 +35,7 @@
       position: relative;
     }
     @include desktop {
-      align-items: flex-start
+      align-items: flex-start;
     }
   }
   &__heading {
