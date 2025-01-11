@@ -11,6 +11,14 @@
     & path[fill="#2D314D"] {
       fill: $White;
     }
+    &-link {
+      @include noBackground;
+      &:is(:hover, :focus-visible) {
+        .footer__logo path[fill="#2D314D"] {
+          fill: $Lime-Green;
+        }
+      }
+    }
   }
   &__list {
     @include flex(row, center);
@@ -36,7 +44,7 @@
     & img {
       @include transition;
       width: 1.5rem;
-      &:hover {
+      &:is(:hover, :focus-visible) {
         filter: invert(34%) sepia(91%) saturate(677%) hue-rotate(92deg)
           brightness(97%) contrast(95%);
       }

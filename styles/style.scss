@@ -41,29 +41,34 @@ ul {
   &__btn {
     @include noBackground;
     @include menu-icon;
-    @include desktop{
+    @include desktop {
       @include btn;
       margin-top: 0;
       text-wrap: nowrap;
-      &:hover {
+      &:is(:hover, :focus-visible) {
         background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
       }
     }
     &-text {
       display: none;
-      @include desktop{
+      @include desktop {
         display: block;
       }
     }
   }
   &__menu {
     cursor: pointer;
-    @include desktop{
+    @include desktop {
       display: none;
     }
   }
   &__logo-link {
     @include noBackground;
+    &:is(:hover, :focus-visible) {
+      .header__logo path[fill="#2D314D"] {
+        fill: $Lime-Green;
+      }
+    }
   }
 }
 
@@ -96,7 +101,7 @@ ul {
     @include subHeading;
     @include noBackground;
     @include desktop {
-      @include text
+      @include text;
     }
     &::after {
       content: "";
