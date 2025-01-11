@@ -45,6 +45,9 @@ ul {
       @include btn;
       margin-top: 0;
       text-wrap: nowrap;
+      &:hover {
+        background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+      }
     }
     &-text {
       display: none;

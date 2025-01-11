@@ -6,6 +6,7 @@
     gap: 4rem;
   }
   &__wrapper {
+    @include flex(column, center);
     @include desktop {
       @include flex(row, center)
     }

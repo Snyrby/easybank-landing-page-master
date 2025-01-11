@@ -120,6 +120,13 @@
     gap: 4rem;
   }
 }
+.cta__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
 @media screen and (min-width: 768px) {
   .cta__wrapper {
     display: flex;
@@ -452,6 +459,9 @@ ul {
   .header__btn:is(:hover, :focus-visible) {
     opacity: 0.7;
     text-decoration: underline;
+  }
+  .header__btn:hover {
+    background-image: linear-gradient(to right, #31d35c, #2bb7da);
   }
 }
 .header__btn-text {
